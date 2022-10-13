@@ -130,7 +130,7 @@ void listenToSecretKnock(){
 
     // We've got our knock recorded, let's play it back.
     Serial.println('playback starting');
-    for (int i=0;i<maximumKnocks;i++) {
+    for (int i=0;i<currentKnockNumber+1;i++) {
         digitalWrite(playbackLED, HIGH);
         delay(knockPlaybackTime);
         digitalWrite(playbackLED, LOW);
